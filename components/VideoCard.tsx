@@ -36,6 +36,7 @@ export default function VideoCard({ video }: { video: any }) {
         size={32}
         color={liked ? "red" : "white"}
       />
+      {liked && <Text style={styles.likedText}>Liked</Text>}
     </TouchableOpacity>
     <TouchableOpacity onPress={toggleMute} style={styles.btn}>
       <Ionicons
@@ -87,5 +88,10 @@ const styles = StyleSheet.create({
   desc: {
     color: 'white',
     fontSize: 14,
+  },
+  likedText: {
+    color: 'red',
+    fontSize: 10,
+    marginTop: 2,
   },
 });
