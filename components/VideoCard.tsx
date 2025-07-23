@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   likedText: {
-    color: 'red',
+    color:'red',
     fontSize: 10,
     marginTop: 2,
   },
