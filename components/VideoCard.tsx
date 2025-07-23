@@ -1,7 +1,7 @@
 
 import { Ionicons } from '@expo/vector-icons';
 import { Video as ExpoVideo, ResizeMode } from 'expo-av';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
@@ -9,6 +9,10 @@ const { width, height } = Dimensions.get('window');
 export default function VideoCard({ video }: { video: any }) {
   const [liked, setLiked] = useState(false);
   const [muted, setMuted] = useState(false);
+
+  useEffect(() => {
+    console.log('Muted state:', muted);
+  }, [muted]);
 
   const onLike = () => {
     setLiked(!liked);
@@ -44,6 +48,7 @@ export default function VideoCard({ video }: { video: any }) {
         size={32}
         color="white"
       />
+      <Text style={{ color: 'white', fontSize: 10, marginTop: 2 }}>{muted ? 'Muted' : 'Unmuted'}</Text>
     </TouchableOpacity>
   </View>
 
