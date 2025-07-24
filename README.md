@@ -1,50 +1,53 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
 
-1. Install dependencies
+# Video Feed App
 
-   ```bash
+Welcome to the Video Feed App! This is a TikTok-ish vertical video feed built with Expo (not yet migrated to React Native CLI). It's not going to change the world, but hey, it works and you can scroll, like, mute, and even sign in with Google.
+
+## Features
+- Scroll through videos like you have nothing better to do
+- Google Sign-In (Firebase-powered, sometimes moody)
+- Profile page that shows your info so you feel important
+
+
+## Getting Started
+
+### Prerequisites
+- Node.js (LTS)
+- Expo CLI (`npm install -g expo-cli`)
+- Android Studio (for Android) or Xcode (for iOS)
+- A Firebase project with Google Sign-In enabled
+- A sense of humor (optional, but recommended)
+
+### Installation
+1. Clone this beautiful mess:
+   ```sh
+   git clone https://github.com/insaneodyssey26/Video-feed-app.git
+   cd Video-feed-app
+   ```
+2. Install the stuff:
+   ```sh
    npm install
    ```
-
-2. Start the app
-
-   ```bash
+3. Add your Firebase config to a `.env` file (see `.gitignore` for what not to commit).
+4. Run it:
+   ```sh
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## Folder Structure
+- `app/` - Screens and navigation
+- `components/` - UI bits and pieces
+- `assets/` - Images, fonts, and other stuff
+- `constants/` - Colors and other constants
+- `hooks/` - Custom hooks (because React devs love hooks)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Notes
+- This project is currently Expo-based. Migration to React Native CLI is planned, but not done yet.
+- API keys and secrets are gitignored, so don’t even try.
+- If something breaks, blame the internet. Or Google. Or me.
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## License
+MIT (because sharing is caring)
