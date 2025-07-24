@@ -8,7 +8,8 @@ import { auth } from '../../firebase';
 export default function ProfileScreen() {
   const [user, setUser] = useState<any>(null);
   const [request, response, promptAsync] = Google.useAuthRequest({
-    clientId: '495592493636-0lllrf9q766la4rt2gjp3vvec7f5udmv.apps.googleusercontent.com',
+    clientId: '495592493636-vt3rbt4kr6n886io1vevggmb1a77u3cu.apps.googleusercontent.com',
+    scopes: ['profile', 'email'],
   });
 
   React.useEffect(() => {
@@ -16,7 +17,7 @@ export default function ProfileScreen() {
       setUser(user);
     });
     return unsubscribe;
-  }, [auth]);
+  }, []);
 
   React.useEffect(() => {
     if (response?.type === 'success') {
@@ -24,7 +25,7 @@ export default function ProfileScreen() {
       const credential = GoogleAuthProvider.credential(id_token);
       signInWithCredential(auth, credential);
     }
-  }, [response, auth]);
+  }, [response]);
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

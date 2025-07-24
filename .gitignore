@@ -31,7 +31,17 @@ yarn-error.*
 *.pem
 
 # local env files
-.env*.local
+.env*
+firebaseConfig.js
+firebaseConfig.ts
+*.keystore
+google-services.json
+GoogleService-Info.plist
+*.env
+*.secret
+*.credentials
+apikeys.json
+apikeys.ts
 
 # typescript
 *.tsbuildinfo
